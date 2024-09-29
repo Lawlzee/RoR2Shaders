@@ -42,6 +42,7 @@ namespace RoR2Shaders
             RoR2Application.onLoad += () =>
             {
                 Grayscale.Init(Config);
+                Outline.Init(Config);
             };
 
             ContentManager.collectContentPackProviders += GiveToRoR2OurContentPackProviders;

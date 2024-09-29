@@ -12,13 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2bc42388fc63c4bbe021dec97f30aa, type: 3}
   m_Name: Grayscale
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   blend:
     overrideState: 1
     value: 1
+--- !u!114 &-2282690787312323607
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639e37f7d018e274295fdffbbd5f1801, type: 3}
+  m_Name: Outline
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  color:
+    overrideState: 1
+    value: {r: 1, g: 0, b: 0, a: 1}
+  thinness:
+    overrideState: 1
+    value: 2
+  densityInverse:
+    overrideState: 1
+    value: 0.266
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,3 +58,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
   - {fileID: -2867001371099397777}
+  - {fileID: -2282690787312323607}

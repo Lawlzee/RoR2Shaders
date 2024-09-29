@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
 namespace RoR2Shaders
@@ -51,13 +52,24 @@ namespace RoR2Shaders
             };
         }
 
-        public static void AddHandler<T>(Action<PostProcessProfile> handler)
+        public static void AddHandler<T>(Action<T> handler)
+            where T : PostProcessEffectSettings
         {
-            _shaderHandler[typeof(T)] = handler;
+            _shaderHandler[typeof(T)] = profile =>
+            {
+                if (!profile.TryGetSettings(out T settings))
+                {
+                    settings = ScriptableObject.CreateInstance<T>();
+                    profile.AddSettings(settings);
+                }
+
+                handler(settings);
+            };
             OnChange<T>();
         }
 
         public static void OnChange<T>()
+            where T : PostProcessEffectSettings
         {
             if (!_shaderHandler.TryGetValue(typeof(T), out var handler))
             {

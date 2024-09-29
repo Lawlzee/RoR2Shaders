@@ -18,6 +18,7 @@ MonoBehaviour:
   - assetBundleName: ror2shaders
     assets:
     - {fileID: 4800000, guid: 964b655165ab55843a91a9b5f2a9408f, type: 3}
+    - {fileID: 4800000, guid: 8ac9e36ced18f8040bd805c6bb56ffb4, type: 3}
 --- !u!114 &-6844045057250356348
 MonoBehaviour:
   m_ObjectHideFlags: 0
