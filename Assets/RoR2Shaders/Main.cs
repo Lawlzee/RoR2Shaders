@@ -35,15 +35,14 @@ namespace RoR2Shaders
             var texture = LoadTexture("icon.png");
             var sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0, 0));
             ModSettingsManager.SetModIcon(sprite);
-            ModSettingsManager.SetModDescription("Adds shaders.");
+            ModSettingsManager.SetModDescription("This mod adds custom shaders to Risk of Rain 2. Currently, only a grayscale shader is available.");
+
+            PostProcessProfileManager.Init();
 
             RoR2Application.onLoad += () =>
             {
-                PostProcessProfileManager.Init();
                 Grayscale.Init(Config);
             };
-
-            //ChestRevealerHooks.Init();
 
             ContentManager.collectContentPackProviders += GiveToRoR2OurContentPackProviders;
         }

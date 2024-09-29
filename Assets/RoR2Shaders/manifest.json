@@ -1,9 +1,9 @@
 ﻿{
   "name": "RoR2Shaders",
-  "version_number": "1.3.0",
-  "website_url": "https://github.com/Lawlzee/StageReport",
-  "displayName": "Stage Recap",
-  "description": "At the end of each stage, RoR2Shaders shows all the interactables on the stage and how many you’ve collected. This helps players improve at full looting stages.",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/Lawlzee/RoR2Shaders",
+  "displayName": "RoR2 Shaders",
+  "description": "This mod adds custom shaders to Risk of Rain 2. Currently, only a grayscale shader is available.",
   "dependencies": [
     "bbepis-BepInExPack-5.4.2108",
     "RiskofThunder-HookGenPatcher-1.2.3",

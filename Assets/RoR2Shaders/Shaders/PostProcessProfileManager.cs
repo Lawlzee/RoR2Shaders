@@ -54,6 +54,7 @@ namespace RoR2Shaders
         public static void AddHandler<T>(Action<PostProcessProfile> handler)
         {
             _shaderHandler[typeof(T)] = handler;
+            OnChange<T>();
         }
 
         public static void OnChange<T>()

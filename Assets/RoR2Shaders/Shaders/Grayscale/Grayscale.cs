@@ -22,10 +22,10 @@ namespace RoR2Shaders
 
         public static void Init(ConfigFile config)
         {
-            ConfigEntry<bool> grayscaleEnabled = config.Bind("Grayscale", "Grayscale enabled", true, "Grayscale enabled");
+            ConfigEntry<bool> grayscaleEnabled = config.Bind("Grayscale", "Grayscale Enabled", true, "Toggles the grayscale shader on or off");
             ModSettingsManager.AddOption(new CheckBoxOption(grayscaleEnabled));
 
-            ConfigEntry<float> grayscaleBlend = config.Bind("Grayscale", "Grayscale blend", 1f, "Grayscale blend");
+            ConfigEntry<float> grayscaleBlend = config.Bind("Grayscale", "Grayscale Blend", 1f, "Adjusts the intensity of the grayscale effect. 1 = full grayscale, 0 = no effect");
             ModSettingsManager.AddOption(new SliderOption(grayscaleBlend, new SliderConfig { min = 0, max = 1, formatString = "{0:0.##}" }));
 
             PostProcessProfileManager.AddHandler<Grayscale>(profile =>

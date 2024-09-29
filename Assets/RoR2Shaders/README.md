@@ -1,30 +1,22 @@
 # RoR2 Shaders
 
-At the end of each stage, StageRecap shows all the interactables on the stage and how many you've collected. This helps players improve at full looting stages.
+This mod adds custom shaders to Risk of Rain 2. Currently, only a grayscale shader is available.
 
-In multiplayer, the host must have the mod for it to work for other players.
+[Changelog](https://thunderstore.io/package/Lawlzee/RoR2Shaders/changelog/)
 
-![screenshot](https://raw.githubusercontent.com/Lawlzee/StageReport/master/Assets/StageReport/Images/Example2.png)
+# GrayScale
 
-[Changelog](https://thunderstore.io/package/Lawlzee/StageRecap/changelog/)
+![Grayscale](https://raw.githubusercontent.com/Lawlzee/RoR2Shaders/master/Assets/RoR2Shaders/Images/Grayscale.png)
 
 ## Configuration
 
-You can edit the configuration in `Settings > Mod Options > StageRecap`. All configurations can be adjusted at any time, even in the middle of a run.
+You can edit the configuration in `Settings > Mod Options > RoR2Shaders`. All configurations can be adjusted at any time, even in the middle of a run.
 
-| Category      | Name                 | Default value    | Description                                                                                                                                                                      |
-|---------------|----------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|                                        
-| Configuration | Mod enabled          | true             | Mod enabled |
-| Configuration | Reveal interactables on stage end | true | When the stage recap is shown, the Radar Scanner effect is now activated to show missed interactables. |
-| Visible       | `<interactable name>`| true             | Is `<interactable name>` shown in the stage recap? |
-| Score         | `<interactable name>`| -                | How many points does `<interactable name>` add to the stage completion percentage? |
+| Setting               | Default Value   | Description                                                                     |
+|-----------------------|-----------------|---------------------------------------------------------------------------------|
+| Grayscale Enabled     | true           | Toggles the grayscale shader on or off                                           |
+| Grayscale Blend       | 1              | Adjusts the intensity of the grayscale effect. 1 = full grayscale, 0 = no effect |
 
 ## Report an issue
 
-If you encounter any issues, feel free to reach out to me on Discord (@Lawlzee) or create a [GitHub issue](https://github.com/Lawlzee/StageReport/issues/new). Please include your log file; it is really useful for troubleshooting)
-
-
-## Todo
-
-1. Improve UI.
-2. Display the number of credits available on the stage and the number spent.
+If you encounter any issues, feel free to reach out to me on Discord (@Lawlzee) or create a [GitHub issue](https://github.com/Lawlzee/RoR2Shaders/issues/new). Please include your log file; it is really useful for troubleshooting)
