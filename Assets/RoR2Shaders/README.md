@@ -4,7 +4,7 @@ This mod adds custom shaders to Risk of Rain 2. Currently, only a grayscale shad
 
 [Changelog](https://thunderstore.io/package/Lawlzee/RoR2Shaders/changelog/)
 
-# GrayScale
+# Grayscale
 
 ![Grayscale](https://raw.githubusercontent.com/Lawlzee/RoR2Shaders/master/Assets/RoR2Shaders/Images/Grayscale.png)
 

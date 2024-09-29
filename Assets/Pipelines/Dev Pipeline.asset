@@ -148,4 +148,4 @@ MonoBehaviour:
   Manifests: []
   ArchiveType: 1
   Source: <AssemblyStaging>
-  Output: <AssemblyStaging>\StageRecap.zip
+  Output: <AssemblyStaging>\RoR2Shaders.zip
