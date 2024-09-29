@@ -26,7 +26,7 @@ namespace RoR2Shaders
         public const string PluginGUID = "Lawlzee.RoR2Shaders";
         public const string PluginAuthor = "Lawlzee";
         public const string PluginName = "RoR2Shaders";
-        public const string PluginVersion = "1.0.0";
+        public const string PluginVersion = "1.1.0";
 
         public void Awake()
         {
@@ -35,7 +35,7 @@ namespace RoR2Shaders
             var texture = LoadTexture("icon.png");
             var sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0, 0));
             ModSettingsManager.SetModIcon(sprite);
-            ModSettingsManager.SetModDescription("This mod adds custom shaders to Risk of Rain 2. Currently, only a grayscale shader is available.");
+            ModSettingsManager.SetModDescription("This mod adds custom shaders to Risk of Rain 2.");
 
             PostProcessProfileManager.Init();
 

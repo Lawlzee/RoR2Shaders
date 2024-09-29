@@ -1,9 +1,9 @@
 ﻿{
   "name": "RoR2Shaders",
-  "version_number": "1.0.0",
+  "version_number": "1.1.0",
   "website_url": "https://github.com/Lawlzee/RoR2Shaders",
   "displayName": "RoR2 Shaders",
-  "description": "This mod adds custom shaders to Risk of Rain 2. Currently, only a grayscale shader is available.",
+  "description": "This mod adds custom shaders to Risk of Rain 2.",
   "dependencies": [
     "bbepis-BepInExPack-5.4.2108",
     "RiskofThunder-HookGenPatcher-1.2.3",
