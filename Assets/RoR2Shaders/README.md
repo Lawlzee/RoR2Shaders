@@ -1,6 +1,8 @@
 # RoR2 Shaders
 
-This mod adds custom shaders to Risk of Rain 2. Currently, only a grayscale shader is available.
+This mod adds custom shaders to Risk of Rain 2.
+
+You can edit the configuration in `Settings > Mod Options > RoR2Shaders`. All configurations can be adjusted at any time, even in the middle of a run.
 
 [Changelog](https://thunderstore.io/package/Lawlzee/RoR2Shaders/changelog/)
 
@@ -10,8 +12,6 @@ This mod adds custom shaders to Risk of Rain 2. Currently, only a grayscale shad
 
 ## Outline - Configuration
 
-You can edit the configuration in `Settings > Mod Options > RoR2Shaders`. All configurations can be adjusted at any time, even in the middle of a run.
-
 | Setting         | Default Value | Description                                                                   |
 |-----------------|---------------|-------------------------------------------------------------------------------|
 | Outline Enabled | true          | Toggles the outline shader on or off  |
@@ -19,6 +19,16 @@ You can edit the configuration in `Settings > Mod Options > RoR2Shaders`. All co
 | Outline Thiness | 2             | Controls the thickness of the outline; a higher value results in a thinner outline.  |
 | Outline Density | 0.75          | Adjusts the density of the outline effect; a higher value increases the quantity of outlines. |
 
+# Outline
+
+![ColorBanding](https://raw.githubusercontent.com/Lawlzee/RoR2Shaders/master/Assets/RoR2Shaders/Images/ColorBanding.png)
+
+## Color Banding - Configuration
+
+| Setting               | Default Value | Description                                                                     |
+|-----------------------|---------------|---------------------------------------------------------------------------------|
+| Color Banding Enabled  | true          | Toggles the Color Banding shader on or off  |
+| Color Banding Bins     | 64            | Sets the number of color bins used in the Color Banding shader; higher values increase color detail. |
 
 # Grayscale
 
@@ -26,13 +36,19 @@ You can edit the configuration in `Settings > Mod Options > RoR2Shaders`. All co
 
 ## Grayscale - Configuration
 
-You can edit the configuration in `Settings > Mod Options > RoR2Shaders`. All configurations can be adjusted at any time, even in the middle of a run.
-
 | Setting               | Default Value   | Description                                                                     |
 |-----------------------|-----------------|---------------------------------------------------------------------------------|
 | Grayscale Enabled     | false           | Toggles the grayscale shader on or off                                           |
 | Grayscale Blend       | 1               | Adjusts the intensity of the grayscale effect. 1 = full grayscale, 0 = no effect |
 
-## Report an issue
+# Screenshots
+
+![Screenshot](https://raw.githubusercontent.com/Lawlzee/RoR2Shaders/master/Assets/RoR2Shaders/Images/Example1.png)
+
+![Screenshot](https://raw.githubusercontent.com/Lawlzee/RoR2Shaders/master/Assets/RoR2Shaders/Images/Example2.png)
+
+![Screenshot](https://raw.githubusercontent.com/Lawlzee/RoR2Shaders/master/Assets/RoR2Shaders/Images/Example3.png)
+
+# Report an issue
 
 If you encounter any issues, feel free to reach out to me on Discord (@Lawlzee) or create a [GitHub issue](https://github.com/Lawlzee/RoR2Shaders/issues/new). Please include your log file; it is really useful for troubleshooting)
