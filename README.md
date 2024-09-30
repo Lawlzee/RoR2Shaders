@@ -19,7 +19,7 @@ You can edit the configuration in `Settings > Mod Options > RoR2Shaders`. All co
 | Outline Thiness | 2             | Controls the thickness of the outline; a higher value results in a thinner outline.  |
 | Outline Density | 0.75          | Adjusts the density of the outline effect; a higher value increases the quantity of outlines. |
 
-# Outline
+# Color Banding
 
 ![ColorBanding](https://raw.githubusercontent.com/Lawlzee/RoR2Shaders/master/Assets/RoR2Shaders/Images/ColorBanding.png)
 
@@ -41,7 +41,7 @@ You can edit the configuration in `Settings > Mod Options > RoR2Shaders`. All co
 | Grayscale Enabled     | false           | Toggles the grayscale shader on or off                                           |
 | Grayscale Blend       | 1               | Adjusts the intensity of the grayscale effect. 1 = full grayscale, 0 = no effect |
 
-# Screenshots
+# Examples
 
 ![Screenshot](https://raw.githubusercontent.com/Lawlzee/RoR2Shaders/master/Assets/RoR2Shaders/Images/Example1.png)
 
