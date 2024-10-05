@@ -94,6 +94,11 @@
                 FragColor = float4(FragColor.rgb * _Color, 1.0);
                 FragColor = float4(textures[4] - FragColor.xyz, 1);
 
+                
+                FragColor = max(0, FragColor);
+                FragColor = (FragColor*(2.51f*FragColor+0.03f))/(FragColor*(2.43f*FragColor+0.59f)+0.14f);
+
+
                 return FragColor;
             }
             ENDHLSL

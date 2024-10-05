@@ -26,7 +26,7 @@ namespace RoR2Shaders
         public const string PluginGUID = "Lawlzee.RoR2Shaders";
         public const string PluginAuthor = "Lawlzee";
         public const string PluginName = "RoR2Shaders";
-        public const string PluginVersion = "1.2.0";
+        public const string PluginVersion = "1.3.0";
 
         public void Awake()
         {
@@ -41,7 +41,10 @@ namespace RoR2Shaders
 
             RoR2Application.onLoad += () =>
             {
+                HueSaturationValue.Init(Config);
+                Sharpeness.Init(Config);
                 ColorBanding.Init(Config);
+                Dither.Init(Config);
                 Grayscale.Init(Config);
                 Outline.Init(Config);
             };

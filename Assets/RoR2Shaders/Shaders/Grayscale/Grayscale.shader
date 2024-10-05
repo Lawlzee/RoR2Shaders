@@ -20,7 +20,7 @@ Shader "Hidden/Custom/Grayscale"
                   float4 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
                   // Compute the luminance for the current pixel
                   float luminance = dot(color.rgb, float3(0.2126729, 0.7151522, 0.0721750));
-                  color.rgb = lerp(color.rgb, luminance.xxx, _Blend.xxx);
+                  color.rgb = lerp(color.rgb, luminance, _Blend);
                   // Return the result
                   return color;
               }

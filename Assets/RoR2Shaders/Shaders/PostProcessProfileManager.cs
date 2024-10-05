@@ -52,7 +52,7 @@ namespace RoR2Shaders
             };
         }
 
-        public static void AddHandler<T>(Action<T> handler)
+        public static void OverrideConfig<T>(Action<T> handler)
             where T : PostProcessEffectSettings
         {
             _shaderHandler[typeof(T)] = profile =>

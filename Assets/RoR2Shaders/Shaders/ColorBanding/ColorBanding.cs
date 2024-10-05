@@ -17,7 +17,6 @@ namespace RoR2Shaders
     [PostProcess(typeof(ColorBandingRenderer), PostProcessEvent.AfterStack, "Custom/ColorBanding")]
     public sealed class ColorBanding : PostProcessEffectSettings
     {
-        [Tooltip("Color banding bins")]
         public IntParameter bins = new IntParameter { value = 16 };
 
         public static void Init(ConfigFile config)
@@ -28,7 +27,7 @@ namespace RoR2Shaders
             ConfigEntry<int> colorBandingBins = config.Bind("Color Banding", "Color Banding Bins", 64, "Sets the number of color bins used in the Color Banding shader; higher values increase color detail.");
             ModSettingsManager.AddOption(new IntSliderOption(colorBandingBins, new IntSliderConfig { min = 8, max = 128 }));
 
-            PostProcessProfileManager.AddHandler<ColorBanding>(colorBanding =>
+            PostProcessProfileManager.OverrideConfig<ColorBanding>(colorBanding =>
             {
                 colorBanding.enabled.Override(colorBandingEnabled.Value);
                 colorBanding.bins.Override(colorBandingBins.Value);

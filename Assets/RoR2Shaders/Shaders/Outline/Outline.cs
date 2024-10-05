@@ -17,13 +17,10 @@ namespace RoR2Shaders
     [PostProcess(typeof(OutlineRenderer), PostProcessEvent.AfterStack, "Custom/Outline")]
     public sealed class Outline : PostProcessEffectSettings
     {
-        [Tooltip("Outline color")]
         public ColorParameter color = new ColorParameter { value = Color.black };
 
-        [Tooltip("Outline thinness")]
         public FloatParameter thinness = new FloatParameter { value = 2f };
 
-        [Tooltip("Outline density")]
         [Range(0, 1)]
         public FloatParameter densityInverse = new FloatParameter { value = 0.25f };
 
@@ -41,7 +38,7 @@ namespace RoR2Shaders
             ConfigEntry<float> outlineDensity = config.Bind("Outline", "Outline Density", 0.75f, "Adjusts the density of the outline effect; a higher value increases the quantity of outlines.");
             ModSettingsManager.AddOption(new SliderOption(outlineDensity, new SliderConfig { min = 0f, max = 1, formatString = "{0:0.##}" }));
 
-            PostProcessProfileManager.AddHandler<Outline>(outline =>
+            PostProcessProfileManager.OverrideConfig<Outline>(outline =>
             {
                 outline.enabled.Override(outlineEnabled.Value);
                 outline.color.Override(outlineColor.Value);

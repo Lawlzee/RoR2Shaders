@@ -17,7 +17,7 @@ namespace RoR2Shaders
     [PostProcess(typeof(GrayscaleRenderer), PostProcessEvent.AfterStack, "Custom/Grayscale")]
     public sealed class Grayscale : PostProcessEffectSettings
     {
-        [Range(0f, 1f), Tooltip("Grayscale effect intensity.")]
+        [Range(0f, 1f)]
         public FloatParameter blend = new FloatParameter { value = 0.5f };
 
         public static void Init(ConfigFile config)
@@ -28,7 +28,7 @@ namespace RoR2Shaders
             ConfigEntry<float> grayscaleBlend = config.Bind("Grayscale", "Grayscale Blend", 1f, "Adjusts the intensity of the grayscale effect. 1 = full grayscale, 0 = no effect");
             ModSettingsManager.AddOption(new SliderOption(grayscaleBlend, new SliderConfig { min = 0, max = 1, formatString = "{0:0.##}" }));
 
-            PostProcessProfileManager.AddHandler<Grayscale>(grayscale =>
+            PostProcessProfileManager.OverrideConfig<Grayscale>(grayscale =>
             {
                 grayscale.enabled.Override(grayscaleEnabled.Value);
                 grayscale.blend.Override(grayscaleBlend.Value);
