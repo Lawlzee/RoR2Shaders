@@ -24,9 +24,11 @@ namespace RoR2Shaders
         {
             ConfigEntry<bool> grayscaleEnabled = config.Bind("Grayscale", "Grayscale Enabled", false, "Toggles the grayscale shader on or off");
             ModSettingsManager.AddOption(new CheckBoxOption(grayscaleEnabled));
+            ShaderPresetManager.Bind(grayscaleEnabled, x => x.grayscale.enabled);
 
             ConfigEntry<float> grayscaleBlend = config.Bind("Grayscale", "Grayscale Blend", 1f, "Adjusts the intensity of the grayscale effect. 1 = full grayscale, 0 = no effect");
             ModSettingsManager.AddOption(new SliderOption(grayscaleBlend, new SliderConfig { min = 0, max = 1, formatString = "{0:0.##}" }));
+            ShaderPresetManager.Bind(grayscaleBlend, x => x.grayscale.blend);
 
             PostProcessProfileManager.OverrideConfig<Grayscale>(grayscale =>
             {

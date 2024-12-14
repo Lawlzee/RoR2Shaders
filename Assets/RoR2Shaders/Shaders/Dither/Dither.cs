@@ -27,12 +27,15 @@ namespace RoR2Shaders
         {
             ConfigEntry<bool> ditherEnabled = config.Bind("Dithering", "Dithering Enabled", true, "Toggles the Dithering shader on or off");
             ModSettingsManager.AddOption(new CheckBoxOption(ditherEnabled));
-            
+            ShaderPresetManager.Bind(ditherEnabled, x => x.dither.enabled);
+
             ConfigEntry<float> ditheringSpread = config.Bind("Dithering", "Dither Spread", 0.2f, "Adjust how much the dithering affects the colors.");
             ModSettingsManager.AddOption(new SliderOption(ditheringSpread, new SliderConfig { min = 0, max = 1, formatString = "{0:0.##}" }));
+            ShaderPresetManager.Bind(ditheringSpread, x => x.dither.spread);
 
             ConfigEntry<int> ditherLevel = config.Bind("Dithering", "Dithering Level", 0, "Controls the size of the dithering pattern. Higher values create a wider dither pattern, lower values make it more compact.");
             ModSettingsManager.AddOption(new IntSliderOption(ditherLevel, new IntSliderConfig { min = 0, max = 2 }));
+            ShaderPresetManager.Bind(ditherLevel, x => x.dither.bayerLevel);
 
             PostProcessProfileManager.OverrideConfig<Dither>(dither =>
             {

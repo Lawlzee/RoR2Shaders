@@ -21,11 +21,23 @@ namespace RoR2Shaders
 
         public static void Init(ConfigFile config)
         {
-            ConfigEntry<bool> colorBandingEnabled = config.Bind("Color Banding", "Color Banding Enabled", true, "Toggles the Color Banding shader on or off");
-            ModSettingsManager.AddOption(new CheckBoxOption(colorBandingEnabled));
+            ShaderConfigManager.AddShader<ColorBanding, ColorBandingPreset>(x => ref x.colorBanding)
+                .AddConfig(
+                    config =>
+                    {
+                        ConfigEntry<bool> colorBandingEnabled = config.Bind("Color Banding", "Color Banding Enabled", true, "Toggles the Color Banding shader on or off");
+                        ModSettingsManager.AddOption(new CheckBoxOption(colorBandingEnabled));
+
+                        return colorBandingEnabled;
+                    }
+                    );
+
+            
+            ShaderPresetManager.Bind(colorBandingEnabled, x => x.colorBanding.enabled);
 
             ConfigEntry<int> colorBandingBins = config.Bind("Color Banding", "Color Banding Bins", 64, "Sets the number of color bins used in the Color Banding shader; higher values increase color detail.");
             ModSettingsManager.AddOption(new IntSliderOption(colorBandingBins, new IntSliderConfig { min = 8, max = 128 }));
+            ShaderPresetManager.Bind(colorBandingBins, x => x.colorBanding.bins);
 
             PostProcessProfileManager.OverrideConfig<ColorBanding>(colorBanding =>
             {

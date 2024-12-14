@@ -28,21 +28,27 @@ namespace RoR2Shaders
         {
             ConfigEntry<bool> hsvEnabled = config.Bind("Hue Saturation Value", "Hue Saturation Value Enabled", false, "Toggles the Hue Saturation Value shader on or off");
             ModSettingsManager.AddOption(new CheckBoxOption(hsvEnabled));
+            ShaderPresetManager.Bind(hsvEnabled, x => x.hsv.enabled);
 
             ConfigEntry<Color> hsvRedColor = config.Bind("Hue Saturation Value", "Hue Red Color", Color.red, "Defines the target color to which red hues are shifted, adjusting how much the image is color-shifted.");
             ModSettingsManager.AddOption(new ColorOption(hsvRedColor));
+            ShaderPresetManager.Bind(hsvRedColor, x => x.hsv.hueShift);
 
             ConfigEntry<float> hsvMinSaturation = config.Bind("Hue Saturation Value", "Min Saturation", 0f, "Sets the minimum saturation for the image. Adjusts how desaturated the colors can get, with a typical range of [0, 1], but can extend beyond this range to create extreme effects.");
             ModSettingsManager.AddOption(new SliderOption(hsvMinSaturation, new SliderConfig { min = -10, max = 10, formatString = "{0:0.##}" }));
-            
+            ShaderPresetManager.Bind(hsvMinSaturation, x => x.hsv.minSaturation);
+
             ConfigEntry<float> hsvMaxSaturation = config.Bind("Hue Saturation Value", "Max Saturation", 1f, "Sets the maximum saturation for the image. Adjusts how saturated the colors can get, with a typical range of [0, 1], but can extend beyond this range to create extreme effects.");
             ModSettingsManager.AddOption(new SliderOption(hsvMaxSaturation, new SliderConfig { min = -10, max = 10, formatString = "{0:0.##}" }));
-            
+            ShaderPresetManager.Bind(hsvMaxSaturation, x => x.hsv.maxSaturation);
+
             ConfigEntry<float> hsvMinValue = config.Bind("Hue Saturation Value", "Min Value", 0f, "Sets the minimum value (brightness) for the image. Adjusts how dark the colors can get, with a typical range of [0, 1], but can extend beyond this range to create extreme effects.");
             ModSettingsManager.AddOption(new SliderOption(hsvMinValue, new SliderConfig { min = -10, max = 10, formatString = "{0:0.##}" }));
+            ShaderPresetManager.Bind(hsvMinValue, x => x.hsv.minValue);
 
             ConfigEntry<float> hsvMaxValue = config.Bind("Hue Saturation Value", "Max Value", 1f, "Sets the maximum value (brightness) for the image. Adjusts how bright the colors can get, with a typical range of [0, 1], but can extend beyond this range to create extreme effects.");
             ModSettingsManager.AddOption(new SliderOption(hsvMaxValue, new SliderConfig { min = -10, max = 10, formatString = "{0:0.##}" }));
+            ShaderPresetManager.Bind(hsvMaxValue, x => x.hsv.maxValue);
 
             PostProcessProfileManager.OverrideConfig<HueSaturationValue>(hsv =>
             {

@@ -28,15 +28,19 @@ namespace RoR2Shaders
         {
             ConfigEntry<bool> outlineEnabled = config.Bind("Outline", "Outline Enabled", true, "Toggles the outline shader on or off");
             ModSettingsManager.AddOption(new CheckBoxOption(outlineEnabled));
+            ShaderPresetManager.Bind(outlineEnabled, x => x.outline.enabled);
 
             ConfigEntry<Color> outlineColor = config.Bind("Outline", "Outline Color", Color.black, "Specifies the color of the outline");
             ModSettingsManager.AddOption(new ColorOption(outlineColor));
+            ShaderPresetManager.Bind(outlineColor, x => x.outline.color);
 
             ConfigEntry<float> outlineThiness = config.Bind("Outline", "Outline Thiness", 2f, "Controls the thickness of the outline; a higher value results in a thinner outline.");
             ModSettingsManager.AddOption(new SliderOption(outlineThiness, new SliderConfig { min = 0.1f, max = 25, formatString = "{0:0.##}" }));
-            
+            ShaderPresetManager.Bind(outlineThiness, x => x.outline.thinness);
+
             ConfigEntry<float> outlineDensity = config.Bind("Outline", "Outline Density", 0.75f, "Adjusts the density of the outline effect; a higher value increases the quantity of outlines.");
             ModSettingsManager.AddOption(new SliderOption(outlineDensity, new SliderConfig { min = 0f, max = 1, formatString = "{0:0.##}" }));
+            ShaderPresetManager.Bind(outlineDensity, x => x.outline.density);
 
             PostProcessProfileManager.OverrideConfig<Outline>(outline =>
             {

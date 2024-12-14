@@ -48,6 +48,11 @@ namespace RoR2Shaders
                     shaderNameToShaderCache.Add(shader.name, shader);
                 }
             }));
+
+            yield return LoadAllAssetsAsync(stageReportBundle, args.progressReceiver, (Action<ShaderPresetCollection[]>)(presetCollections =>
+            {
+                ShaderPresetCollection.instance = presetCollections[0];
+            }));
             
             //yield return LoadAllAssetsAsync(stageReportBundle, args.progressReceiver, (Action<GameObject[]>)((assets) =>
             //{

@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d0a95e65bb55c4e8a01ff8c0ce356d, type: 3}
   m_Name: HueSaturationValue
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -103,16 +103,16 @@ MonoBehaviour:
     value: 0
   minSaturation:
     overrideState: 1
-    value: 0.21
+    value: 0
   maxSaturation:
     overrideState: 1
-    value: 1.18
+    value: 1.5
   minValue:
     overrideState: 1
-    value: 1
+    value: 0.5
   maxValue:
     overrideState: 1
-    value: 0
+    value: -1
 --- !u!114 &1611502472657151092
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6a6716c3e9e9c4e9e51faf1353e264, type: 3}
   m_Name: Sharpeness
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
